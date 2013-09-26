@@ -34,7 +34,7 @@ module Swiftype
 
       if uri.scheme == 'https'
         http.use_ssl = true
-        http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+        http.verify_mode = OpenSSL::SSL::VERIFY_NONE
         http.ca_file = File.join(__FILE__, '..', 'data', 'ca-bundle.crt')
       end
 
